@@ -13,6 +13,7 @@
         <module>ch02/my-first-vaadin-app</module>
         <module>ch02/welcome-to-vaadin</module>
         <module>ch03/layouts</module>
+        <module>ch04/input-components</module>
     </modules>
 
 </project>
