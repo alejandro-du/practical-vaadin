@@ -14,6 +14,10 @@
         <module>ch02/welcome-to-vaadin</module>
         <module>ch03/layouts</module>
         <module>ch04/input-components</module>
+        <module>ch04/interaction-components</module>
+        <module>ch04/visualization-components</module>
+        <module>ch05/manual-binding</module>
+        <module>ch05/binder</module>
     </modules>
 
 </project>
