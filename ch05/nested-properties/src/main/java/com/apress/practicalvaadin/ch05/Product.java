@@ -6,7 +6,7 @@ public class Product {
 
   private boolean available = true;
 
-  private Manufacturer manufacturer;
+  private Manufacturer manufacturer = new Manufacturer("", "", "");
 
   public Product() {
   }

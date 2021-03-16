@@ -18,7 +18,14 @@ import java.util.Set;
 public class ProductManagementView extends Composite {
 
   private static Set<Product> products = new HashSet<>();
+  private static Set<Manufacturer> manufacturers = new HashSet<>();
   private VerticalLayout productsLayout = new VerticalLayout();
+
+  static {
+    manufacturers.add(new Manufacturer("Unix Beers", "555111", "beer@example.com"));
+    manufacturers.add(new Manufacturer("Whisky Soft", "555222", "whisky@example.com"));
+    manufacturers.add(new Manufacturer("Wines Java", "555333", "wine@example.com"));
+  }
 
   @Override
   protected Component initContent() {
@@ -50,8 +57,10 @@ public class ProductManagementView extends Composite {
     dialog.setModal(true);
     dialog.open();
 
-    // dialog.add(new AutomaticProductForm(product, () -> {
-    dialog.add(new ProductForm(product, () -> {
+    // this example includes two implementations of the product form
+    // pick the one you are interested in:
+    dialog.add(new AutoBindingProductForm(product, manufacturers, () -> {
+      //dialog.add(new ProductForm(product, manufacturers, () -> {
       dialog.close();
       save(product);
     }));

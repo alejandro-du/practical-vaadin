@@ -12,12 +12,19 @@
     <modules>
         <module>ch02/my-first-vaadin-app</module>
         <module>ch02/welcome-to-vaadin</module>
+
         <module>ch03/layouts</module>
+
         <module>ch04/input-components</module>
         <module>ch04/interaction-components</module>
         <module>ch04/visualization-components</module>
+
         <module>ch05/manual-binding</module>
         <module>ch05/binder</module>
+        <module>ch05/nested-properties</module>
+        <module>ch05/conversion</module>
+        <module>ch05/validation</module>
+        <module>ch05/jakarta-bean-validation</module>
     </modules>
 
 </project>

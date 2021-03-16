@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route;
 import java.util.HashSet;
 import java.util.Set;
 
-@Route("product-management")
+@Route("product-management3")
 public class ProductManagementView extends Composite {
 
   private static Set<Product> products = new HashSet<>();
@@ -57,7 +57,7 @@ public class ProductManagementView extends Composite {
     dialog.setModal(true);
     dialog.open();
 
-    dialog.add(new ProductForm(product, manufacturers, () -> {
+    dialog.add(new AutoBindingProductForm(product, manufacturers, () -> {
       dialog.close();
       save(product);
     }));

@@ -1,12 +1,19 @@
 package com.apress.practicalvaadin.ch05;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class Product {
 
+  @NotNull
+  @NotBlank
   private String name;
+
+  private Code code = new Code(Type.DRINK, "");
 
   private boolean available = true;
 
-  private Manufacturer manufacturer;
+  private Manufacturer manufacturer = new Manufacturer("", "", "");
 
   public Product() {
   }
@@ -17,6 +24,14 @@ public class Product {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public Code getCode() {
+    return code;
+  }
+
+  public void setCode(Code code) {
+    this.code = code;
   }
 
   public boolean isAvailable() {

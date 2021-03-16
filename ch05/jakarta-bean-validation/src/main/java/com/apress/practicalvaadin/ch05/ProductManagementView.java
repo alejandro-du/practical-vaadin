@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route;
 import java.util.HashSet;
 import java.util.Set;
 
-@Route("product-management")
+@Route("product-management5")
 public class ProductManagementView extends Composite {
 
   private static Set<Product> products = new HashSet<>();

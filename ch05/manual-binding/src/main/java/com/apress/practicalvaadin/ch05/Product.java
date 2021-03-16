@@ -6,12 +6,9 @@ public class Product {
 
   private boolean available = true;
 
-  public Product() {
-  }
+  private Manufacturer manufacturer;
 
-  public Product(String name, boolean available) {
-    this.name = name;
-    this.available = available;
+  public Product() {
   }
 
   public String getName() {
@@ -28,6 +25,14 @@ public class Product {
 
   public void setAvailable(boolean available) {
     this.available = available;
+  }
+
+  public Manufacturer getManufacturer() {
+    return manufacturer;
+  }
+
+  public void setManufacturer(Manufacturer manufacturer) {
+    this.manufacturer = manufacturer;
   }
 
 }

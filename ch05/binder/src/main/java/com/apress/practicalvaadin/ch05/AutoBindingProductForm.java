@@ -4,6 +4,7 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.checkbox.Checkbox;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -12,18 +13,27 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.PropertyId;
 import com.vaadin.flow.function.SerializableRunnable;
 
-public class AutomaticProductForm extends Composite {
+import java.util.Set;
+
+public class AutoBindingProductForm extends Composite {
 
   private final SerializableRunnable saveListener;
 
   @PropertyId("name")
-  private TextField nameField = new TextField("Name");
+  private TextField nameTextField = new TextField("Name");
+
+  @PropertyId("manufacturer")
+  private ComboBox<Manufacturer> manufacturerComboBox = new ComboBox<>();
 
   @PropertyId("available")
-  private Checkbox availableField = new Checkbox("Available");
+  private Checkbox availableCheckbox = new Checkbox("Available");
 
-  public AutomaticProductForm(Product product, SerializableRunnable saveListener) {
+  public AutoBindingProductForm(Product product, Set<Manufacturer> manufacturers,
+                                SerializableRunnable saveListener) {
     this.saveListener = saveListener;
+
+    manufacturerComboBox.setItems(manufacturers);
+    manufacturerComboBox.setItemLabelGenerator(Manufacturer::getName);
 
     Binder<Product> binder = new Binder<>(Product.class);
     binder.bindInstanceFields(this);
@@ -34,8 +44,9 @@ public class AutomaticProductForm extends Composite {
   protected Component initContent() {
     return new VerticalLayout(
         new H1("Product"),
-        nameField,
-        availableField,
+        nameTextField,
+        manufacturerComboBox,
+        availableCheckbox,
         new Button("Save", VaadinIcon.CHECK.create(),
             event -> saveListener.run())
     );
