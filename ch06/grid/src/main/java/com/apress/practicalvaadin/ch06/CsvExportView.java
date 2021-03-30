@@ -56,7 +56,7 @@ public class CsvExportView extends Composite<Component> {
             StringWriter output = new StringWriter();
             var beanToCsv = new StatefulBeanToCsvBuilder<Book>(output)
                 .withIgnoreField(Book.class, Book.class.getDeclaredField("id"))
-                .withIgnoreField(Book.class, Book.class.getDeclaredField("nextId"))
+                .withIgnoreField(Book.class, Book.class.getDeclaredField("nextId"))§
                 .build();
             beanToCsv.write(books);
             return new ByteArrayInputStream(output.toString().getBytes());
