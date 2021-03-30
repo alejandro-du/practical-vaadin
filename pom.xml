@@ -25,6 +25,8 @@
         <module>ch05/conversion</module>
         <module>ch05/validation</module>
         <module>ch05/jakarta-bean-validation</module>
+
+        <module>ch06/grid</module>
     </modules>
 
 </project>
