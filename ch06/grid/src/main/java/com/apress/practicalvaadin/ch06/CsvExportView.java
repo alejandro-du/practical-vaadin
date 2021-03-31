@@ -1,5 +1,6 @@
 package com.apress.practicalvaadin.ch06;
 
+import com.opencsv.bean.StatefulBeanToCsv;
 import com.opencsv.bean.StatefulBeanToCsvBuilder;
 import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
@@ -16,8 +17,10 @@ import com.vaadin.flow.component.progressbar.ProgressBar;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.StreamResource;
+import org.vaadin.firitin.components.DynamicFileDownloader;
 
 import java.io.ByteArrayInputStream;
+import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.util.Comparator;
 import java.util.List;
@@ -49,27 +52,19 @@ public class CsvExportView extends Composite<Component> {
 
     updateGrid(grid);
 
-    var streamResource = new StreamResource("books.csv",
-        () -> {
+    DynamicFileDownloader download = new DynamicFileDownloader("Download", "books.csv", output -> {
+          var books = grid.getGenericDataView().getItems();
           try {
-            var books = grid.getGenericDataView().getItems();
-            StringWriter output = new StringWriter();
-            var beanToCsv = new StatefulBeanToCsvBuilder<Book>(output)
-                .withIgnoreField(Book.class, Book.class.getDeclaredField("id"))
-                .withIgnoreField(Book.class, Book.class.getDeclaredField("nextId"))
-                .build();
-            beanToCsv.write(books);
-            return new ByteArrayInputStream(output.toString().getBytes());
-
+              StatefulBeanToCsv<Book> beanToCsv = null;
+              beanToCsv = new StatefulBeanToCsvBuilder<Book>(new OutputStreamWriter(output))
+                      .withIgnoreField(Book.class, Book.class.getDeclaredField("id"))
+                      .withIgnoreField(Book.class, Book.class.getDeclaredField("nextId"))
+                      .build();
+              beanToCsv.write(books);
           } catch (CsvDataTypeMismatchException | CsvRequiredFieldEmptyException | NoSuchFieldException e) {
-            e.printStackTrace();
-            return null;
+              e.printStackTrace();
           }
-        }
-    );
-
-    var download = new Anchor(streamResource, "Download");
-
+    });
     return new VerticalLayout(download, grid);
   }
 
