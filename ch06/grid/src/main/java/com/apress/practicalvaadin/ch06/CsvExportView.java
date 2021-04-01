@@ -53,14 +53,12 @@ public class CsvExportView extends Composite<Component> {
     updateGrid(grid);
 
     DynamicFileDownloader download = new DynamicFileDownloader("Download", "books.csv", output -> {
-          var books = grid.getGenericDataView().getItems();
           try {
-              StatefulBeanToCsv<Book> beanToCsv = null;
-              beanToCsv = new StatefulBeanToCsvBuilder<Book>(new OutputStreamWriter(output))
+              new StatefulBeanToCsvBuilder<Book>(new OutputStreamWriter(output))
                       .withIgnoreField(Book.class, Book.class.getDeclaredField("id"))
                       .withIgnoreField(Book.class, Book.class.getDeclaredField("nextId"))
-                      .build();
-              beanToCsv.write(books);
+                      .build()
+                      .write(grid.getGenericDataView().getItems());
           } catch (CsvDataTypeMismatchException | CsvRequiredFieldEmptyException | NoSuchFieldException e) {
               e.printStackTrace();
           }
