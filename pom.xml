@@ -27,6 +27,10 @@
         <module>ch05/jakarta-bean-validation</module>
 
         <module>ch06/grid</module>
+
+        <module>ch07/routes</module>
+        <module>ch07/navigation-lifecycle</module>
+        <module>ch07/url-parameters</module>
     </modules>
 
 </project>
