@@ -40,6 +40,10 @@
 
 		<module>ch09/dom-manipulation</module>
 		<module>ch09/javascript-integration</module>
+		
+		<module>ch10/themes</module>
+		<module>ch10/css</module>
+		<module>ch10/responsiveness</module>
 	</modules>
 
 </project>

@@ -36,3 +36,4 @@ node_modules/
 drivers/
 error-screenshots/
 webpack.generated.js
+/bin/
