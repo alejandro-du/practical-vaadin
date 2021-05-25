@@ -44,6 +44,8 @@
 		<module>ch10/themes</module>
 		<module>ch10/css</module>
 		<module>ch10/responsiveness</module>
+		
+		<module>ch11/vaadin-fusion</module>
 	</modules>
 
 </project>
