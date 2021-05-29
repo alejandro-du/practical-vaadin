@@ -46,6 +46,8 @@
 		<module>ch10/responsiveness</module>
 		
 		<module>ch11/vaadin-fusion</module>
+		
+		<module>ch12/spring</module>
 	</modules>
 
 </project>
