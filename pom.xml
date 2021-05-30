@@ -48,6 +48,8 @@
 		<module>ch11/vaadin-fusion</module>
 		
 		<module>ch12/spring</module>
+		
+		<module>ch13/jakarta-ee</module>
 	</modules>
 
 </project>
