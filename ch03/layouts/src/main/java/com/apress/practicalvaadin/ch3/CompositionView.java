@@ -9,10 +9,10 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("composition")
-public class CompositionView extends Composite {
+public class CompositionView extends Composite<Component> {
 
   // The Toolbar class could be moved outside the CompositionView class
-  public class Toolbar extends Composite {
+  public class Toolbar extends Composite<Component> {
 
     @Override
     protected Component initContent() {

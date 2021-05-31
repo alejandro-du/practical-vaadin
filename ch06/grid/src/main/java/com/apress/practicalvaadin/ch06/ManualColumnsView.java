@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("manual-columns")
-public class ManualColumnsView extends Composite {
+public class ManualColumnsView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

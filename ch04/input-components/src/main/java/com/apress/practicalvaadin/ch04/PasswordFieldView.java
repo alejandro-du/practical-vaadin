@@ -7,7 +7,7 @@ import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.router.Route;
 
 @Route("password-field")
-public class PasswordFieldView extends Composite {
+public class PasswordFieldView extends Composite<Component> {
 
     @Override
     public Component getContent() {

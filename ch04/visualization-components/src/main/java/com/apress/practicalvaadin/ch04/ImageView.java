@@ -13,7 +13,7 @@ import com.vaadin.flow.server.StreamResource;
 import java.io.InputStream;
 
 @Route("image")
-public class ImageView extends Composite {
+public class ImageView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

@@ -10,7 +10,7 @@ import com.vaadin.flow.router.Route;
 import java.util.List;
 
 @Route("row-selection")
-public class RowSelectionView extends Composite {
+public class RowSelectionView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

@@ -9,7 +9,7 @@ import com.vaadin.flow.router.Route;
 import java.util.List;
 
 @Route("in-memory-data")
-public class InMemoryDataView extends Composite {
+public class InMemoryDataView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

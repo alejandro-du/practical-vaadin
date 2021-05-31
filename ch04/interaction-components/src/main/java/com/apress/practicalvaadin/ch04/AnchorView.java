@@ -13,7 +13,7 @@ import java.nio.charset.Charset;
 import java.time.LocalTime;
 
 @Route("anchor")
-public class AnchorView extends Composite {
+public class AnchorView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

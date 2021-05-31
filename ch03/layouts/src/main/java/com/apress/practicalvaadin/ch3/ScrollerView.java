@@ -9,7 +9,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("scroller")
-public class ScrollerView extends Composite {
+public class ScrollerView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("size")
-public class SizeView extends Composite {
+public class SizeView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

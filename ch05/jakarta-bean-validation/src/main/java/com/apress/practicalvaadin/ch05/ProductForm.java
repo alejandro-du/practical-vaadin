@@ -16,7 +16,7 @@ import com.vaadin.flow.function.SerializableRunnable;
 
 import java.util.Set;
 
-public class ProductForm extends Composite {
+public class ProductForm extends Composite<Component> {
 
   private final SerializableRunnable saveListener;
 

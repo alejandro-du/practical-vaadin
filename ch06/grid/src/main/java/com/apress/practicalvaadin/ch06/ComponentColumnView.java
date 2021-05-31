@@ -13,7 +13,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @Route("component-column")
-public class ComponentColumnView extends Composite {
+public class ComponentColumnView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

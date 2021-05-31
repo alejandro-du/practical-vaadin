@@ -11,7 +11,7 @@ import com.vaadin.flow.router.Route;
 import java.util.List;
 
 @Route("select")
-public class SelectView extends Composite {
+public class SelectView extends Composite<Component> {
 
     private Service service = new Service();
 

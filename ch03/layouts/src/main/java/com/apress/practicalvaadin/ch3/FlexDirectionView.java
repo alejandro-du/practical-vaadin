@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("flex-direction")
-public class FlexDirectionView extends Composite {
+public class FlexDirectionView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("checkbox")
-public class CheckboxView extends Composite {
+public class CheckboxView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

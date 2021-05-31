@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route;
 import java.util.List;
 
 @Route("details-row")
-public class DetailsRowView extends Composite {
+public class DetailsRowView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

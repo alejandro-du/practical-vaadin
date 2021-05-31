@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("alignment")
-public class AlignmentView extends Composite {
+public class AlignmentView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

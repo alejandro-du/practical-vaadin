@@ -14,7 +14,7 @@ import java.time.LocalTime;
 import java.util.Locale;
 
 @Route("datepicker")
-public class DatePickerView extends Composite {
+public class DatePickerView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

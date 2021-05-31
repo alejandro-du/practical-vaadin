@@ -15,7 +15,7 @@ import com.vaadin.flow.function.SerializableRunnable;
 
 import java.util.Set;
 
-public class AutoBindingProductForm extends Composite {
+public class AutoBindingProductForm extends Composite<Component> {
 
   private final SerializableRunnable saveListener;
 

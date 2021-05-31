@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.util.Scanner;
 
 @Route("file-upload")
-public class FileUploadView extends Composite {
+public class FileUploadView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

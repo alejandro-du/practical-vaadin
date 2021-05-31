@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("flex-shrink")
-public class FlexShrinkView extends Composite {
+public class FlexShrinkView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

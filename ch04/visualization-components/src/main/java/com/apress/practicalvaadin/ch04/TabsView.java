@@ -9,7 +9,7 @@ import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
 
 @Route("tabs")
-public class TabsView extends Composite {
+public class TabsView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

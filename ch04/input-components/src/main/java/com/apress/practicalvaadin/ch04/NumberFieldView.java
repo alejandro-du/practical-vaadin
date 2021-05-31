@@ -8,7 +8,7 @@ import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.router.Route;
 
 @Route("number-field")
-public class NumberFieldView extends Composite {
+public class NumberFieldView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("grow")
-public class GrowView extends Composite {
+public class GrowView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

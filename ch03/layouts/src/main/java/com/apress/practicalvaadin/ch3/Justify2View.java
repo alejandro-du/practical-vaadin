@@ -10,7 +10,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("justify2")
-public class Justify2View extends Composite {
+public class Justify2View extends Composite<Component> {
 
   @Override
   protected Component initContent() {

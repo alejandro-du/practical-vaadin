@@ -9,7 +9,7 @@ import com.vaadin.flow.router.Route;
 import java.util.List;
 
 @Route("sorting")
-public class SortingView extends Composite {
+public class SortingView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

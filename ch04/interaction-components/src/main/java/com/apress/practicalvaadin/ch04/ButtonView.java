@@ -10,7 +10,7 @@ import com.vaadin.flow.router.Route;
 import java.time.LocalTime;
 
 @Route("button")
-public class ButtonView extends Composite {
+public class ButtonView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

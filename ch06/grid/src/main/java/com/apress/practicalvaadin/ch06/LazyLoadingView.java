@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("lazy-loading")
-public class LazyLoadingView extends Composite {
+public class LazyLoadingView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

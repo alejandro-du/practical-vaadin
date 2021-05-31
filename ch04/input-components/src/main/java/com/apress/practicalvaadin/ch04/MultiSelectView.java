@@ -10,7 +10,7 @@ import com.vaadin.flow.router.Route;
 import java.util.Set;
 
 @Route("multi-select")
-public class MultiSelectView extends Composite {
+public class MultiSelectView extends Composite<Component> {
 
     private Service service = new Service();
 

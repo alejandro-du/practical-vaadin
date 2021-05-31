@@ -11,7 +11,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("notification")
-public class NotificationView extends Composite {
+public class NotificationView extends Composite<Component> {
 
   private boolean firstTime = true;
 

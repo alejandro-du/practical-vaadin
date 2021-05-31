@@ -12,7 +12,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("menu")
-public class MenuView extends Composite {
+public class MenuView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

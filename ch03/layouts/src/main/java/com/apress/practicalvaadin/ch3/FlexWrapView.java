@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("flex-wrap")
-public class FlexWrapView extends Composite {
+public class FlexWrapView extends Composite<Component> {
 
   @Override
   protected Component initContent() {

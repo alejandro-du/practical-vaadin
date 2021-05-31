@@ -9,7 +9,7 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
 
 @Route("text-field")
-public class TextFieldView extends Composite {
+public class TextFieldView extends Composite<Component> {
 
     @Override
     protected Component initContent() {

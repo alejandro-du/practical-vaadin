@@ -15,7 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Route("product-management4")
-public class ProductManagementView extends Composite {
+public class ProductManagementView extends Composite<Component> {
 
   private static Set<Product> products = new HashSet<>();
   private static Set<Manufacturer> manufacturers = new HashSet<>();
