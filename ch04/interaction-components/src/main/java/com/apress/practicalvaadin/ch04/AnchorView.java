@@ -17,7 +17,7 @@ public class AnchorView extends Composite<Component> {
 
     @Override
     protected Component initContent() {
-        Anchor blogLink = new Anchor("https://www.alejandrodu.com",
+        Anchor blogLink = new Anchor("https://www.programmingbrain.com",
                 "Visit my technical blog");
 
         Anchor vaadinLink = new Anchor("https://vaadin.com",
