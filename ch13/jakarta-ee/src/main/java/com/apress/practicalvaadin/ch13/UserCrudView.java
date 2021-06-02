@@ -41,7 +41,7 @@ public class UserCrudView extends Composite<Component> {
     crud.setFindAllOperation(userRepository::findAll);
     crud.setAddOperation(userRepository::save);
     crud.setUpdateOperation(userRepository::save);
-    crud.setDeleteOperation(userRepository::remove);
+    crud.setDeleteOperation(userRepository::attachAndRemove);
 
     VerticalLayout layout = new VerticalLayout(crud);
     layout.setSizeFull();
