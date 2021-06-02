@@ -19,6 +19,7 @@ public class TabsView extends Composite<Component> {
     Tab delivery = new Tab("Delivery");
     Tabs tabs = new Tabs(order, delivery);
 
+    // FIXME: The Order tab is now shown at start
     tabs.addSelectedChangeListener(event -> {
       Tab selected = event.getSelectedTab();
       tabsContainer.removeAll();
