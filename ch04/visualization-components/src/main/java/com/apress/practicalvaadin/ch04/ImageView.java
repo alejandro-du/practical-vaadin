@@ -2,15 +2,13 @@ package com.apress.practicalvaadin.ch04;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.Unit;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.InputStreamFactory;
 import com.vaadin.flow.server.StreamResource;
-
-import java.io.InputStream;
 
 @Route("image")
 public class ImageView extends Composite<Component> {
@@ -28,7 +26,7 @@ public class ImageView extends Composite<Component> {
     );
 
     Image logo = new Image(source, "Logo");
-    logo.setWidthFull();
+    logo.setWidth(6, Unit.EM);
 
     VerticalLayout layout = new VerticalLayout(
         new H2("Vaadin is fun!"),

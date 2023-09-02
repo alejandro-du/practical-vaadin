@@ -13,7 +13,7 @@ public class NumberFieldView extends Composite<Component> {
     @Override
     protected Component initContent() {
         NumberField numberField = new NumberField("Rating");
-        numberField.setHasControls(true);
+        numberField.setStepButtonsVisible(true);
         numberField.setMin(0.0);
         numberField.setMax(5.0);
         numberField.setStep(0.5);

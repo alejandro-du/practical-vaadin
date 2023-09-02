@@ -14,7 +14,7 @@ var Bicycle = /** @class */ (function () {
         return this.gear = newGear;
     };
     Bicycle.prototype.print = function () {
-        console.log(this.color + " bicycle: " + this.speed + " Km/h (" + this.gear + ")");
+        console.log("".concat(this.color, " bicycle: ").concat(this.speed, " Km/h (").concat(this.gear, ")"));
     };
     return Bicycle;
 }());
@@ -28,4 +28,4 @@ redBicycle.speedUp(8);
 redBicycle.applyBreak(5);
 redBicycle.print();
 // this will produce a compile time error:
-redBicycle.speedUp("10");
+// redBicycle.speedUp("10");

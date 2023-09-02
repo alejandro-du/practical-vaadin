@@ -9,12 +9,12 @@
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <vaadin.version>20.0.0</vaadin.version>
+		<vaadin.version>24.1.7</vaadin.version>
     </properties>
 
     <dependencyManagement>
@@ -46,7 +46,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.3.1</version>
+				<version>3.4.0</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
@@ -66,7 +66,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.34.v20201102</version>
+                <version>11.0.16</version>
                 <configuration>
                     <scanIntervalSeconds>2</scanIntervalSeconds>
                 </configuration>
